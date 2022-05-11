@@ -98,3 +98,22 @@
 2022.05.11 23:07:16 WARN  es[][o.e.t.ThreadPool] timer thread slept for [12.1s/12168ms] on absolute clock which is above the warn threshold of [5000ms]
 2022.05.11 23:07:16 WARN  es[][o.e.t.ThreadPool] timer thread slept for [12.1s/12167376703ns] on relative clock which is above the warn threshold of [5000ms]
 2022.05.11 23:07:22 WARN  es[][o.e.t.ThreadPool] execution of [ReschedulingRunnable{runnable=org.elasticsearch.monitor.jvm.JvmGcMonitorService$1@2c1284f0, interval=1s}] took [5707ms] which is above the warn threshold of [5000ms]
+2022.05.11 23:28:44 WARN  es[][o.e.h.AbstractHttpServerTransport] handling request [null][POST][/projectmeasures/auth/_search?typed_keys=true&max_concurrent_shard_requests=5&search_type=query_then_fetch&batched_reduce_size=512][Netty4HttpChannel{localAddress=/127.0.0.1:9001, remoteAddress=/127.0.0.1:39232}] took [7104ms] which is above the warn threshold of [5000ms]
+2022.05.11 23:28:59 WARN  es[][o.e.h.AbstractHttpServerTransport] handling request [null][POST][/issues/auth/_search?typed_keys=true&max_concurrent_shard_requests=5&search_type=query_then_fetch&batched_reduce_size=512][Netty4HttpChannel{localAddress=/127.0.0.1:9001, remoteAddress=/127.0.0.1:39232}] took [10565ms] which is above the warn threshold of [5000ms]
+2022.05.11 23:29:19 WARN  es[][o.e.t.ThreadPool] execution of [ReschedulingRunnable{runnable=org.elasticsearch.search.SearchService$Reaper@b28394e, interval=1m}] took [18971ms] which is above the warn threshold of [5000ms]
+2022.05.11 23:29:19 WARN  es[][o.e.t.ThreadPool] timer thread slept for [18.9s/18971ms] on absolute clock which is above the warn threshold of [5000ms]
+2022.05.11 23:29:19 WARN  es[][o.e.t.ThreadPool] timer thread slept for [18.9s/18971150121ns] on relative clock which is above the warn threshold of [5000ms]
+2022.05.11 23:29:19 WARN  es[][o.e.h.AbstractHttpServerTransport] handling request [null][GET][/_cluster/health?master_timeout=30s&level=cluster&timeout=30s][Netty4HttpChannel{localAddress=/127.0.0.1:9001, remoteAddress=/127.0.0.1:39136}] took [18971ms] which is above the warn threshold of [5000ms]
+2022.05.11 23:32:58 WARN  es[][o.e.m.f.FsHealthService] health check of [/opt/sonarqube/data/es7/nodes/0] took [7680ms] which is above the warn threshold of [5s]
+2022.05.11 23:32:58 WARN  es[][o.e.t.ThreadPool] timer thread slept for [7.6s/7680ms] on absolute clock which is above the warn threshold of [5000ms]
+2022.05.11 23:32:58 WARN  es[][o.e.t.ThreadPool] timer thread slept for [7.6s/7680079947ns] on relative clock which is above the warn threshold of [5000ms]
+2022.05.11 23:37:25 WARN  es[][o.e.t.ThreadPool] timer thread slept for [7.3s/7361ms] on absolute clock which is above the warn threshold of [5000ms]
+2022.05.11 23:37:25 WARN  es[][o.e.t.ThreadPool] timer thread slept for [7.3s/7361278356ns] on relative clock which is above the warn threshold of [5000ms]
+2022.05.11 23:37:25 WARN  es[][o.e.m.j.JvmGcMonitorService] [gc][young][8722][12] duration [7.2s], collections [1]/[8s], total [7.2s]/[8.1s], memory [348.3mb]->[61.9mb]/[512mb], all_pools {[young] [287mb]->[0b]/[0b]}{[old] [43.3mb]->[43.9mb]/[512mb]}{[survivor] [18mb]->[18mb]/[0b]}
+2022.05.11 23:37:25 WARN  es[][o.e.m.j.JvmGcMonitorService] [gc][8722] overhead, spent [7.2s] collecting in the last [8s]
+2022.05.11 23:37:25 WARN  es[][o.e.t.ThreadPool] execution of [ReschedulingRunnable{runnable=org.elasticsearch.monitor.jvm.JvmGcMonitorService$1@2c1284f0, interval=1s}] took [7361ms] which is above the warn threshold of [5000ms]
+2022.05.11 23:37:46 WARN  es[][o.e.m.j.JvmGcMonitorService] [gc][young][8739][13] duration [2.1s], collections [1]/[3.3s], total [2.1s]/[10.2s], memory [67.9mb]->[61.5mb]/[512mb], all_pools {[young] [6mb]->[0b]/[0b]}{[old] [43.9mb]->[58.5mb]/[512mb]}{[survivor] [18mb]->[3mb]/[0b]}
+2022.05.11 23:37:46 WARN  es[][o.e.m.j.JvmGcMonitorService] [gc][8739] overhead, spent [2.1s] collecting in the last [3.3s]
+2022.05.11 23:41:00 WARN  es[][o.e.m.j.JvmGcMonitorService] [gc][8931] overhead, spent [532ms] collecting in the last [1s]
+2022.05.11 23:45:34 INFO  es[][o.e.m.j.JvmGcMonitorService] [gc][young][9193][15] duration [946ms], collections [1]/[1.3s], total [946ms]/[11.7s], memory [84.4mb]->[62.1mb]/[512mb], all_pools {[young] [22mb]->[0b]/[0b]}{[old] [60.4mb]->[60.1mb]/[512mb]}{[survivor] [2mb]->[2mb]/[0b]}
+2022.05.11 23:45:34 WARN  es[][o.e.m.j.JvmGcMonitorService] [gc][9193] overhead, spent [946ms] collecting in the last [1.3s]

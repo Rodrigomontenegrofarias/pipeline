@@ -3,9 +3,9 @@ pipeline {
     
     environment {
       // General Variables for Pipeline
-      PROJECT_ROOT = 'ci-cd-prueba'
+      PROJECT_ROOT = 'pipeline'
       //EMAIL_ADDRESS = '@gmail.com'
-      REGISTRY = 'monteblack1/docker-prueba'
+      REGISTRY = 'monteblack1/docker-pruebaz'
     }
     stages {
 
@@ -24,13 +24,7 @@ pipeline {
         stage('Checkout') {
             steps {
             // Get Github repo using Github credentials (previously added to Jenkins credentials)
-            checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Rodrigomontenegrofarias/ci-cd-prueba']]])        }
-        }
-        stage('Install dependencies') {
-            steps {
-            sh 'python --version'
-            sh "cd ${PROJECT_ROOT}; pip install flask"
-            }
+            checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Rodrigomontenegrofarias/pipeline']]])        }
         }
         stage('scan') {
           environment {
@@ -46,7 +40,7 @@ pipeline {
                           -Dsonar.projectName=SimpleExpressExample \
                           -Dsonar.projectVersion=0.0.${BUILD_NUMBER} \
                           -Dsonar.host.url=http://mysonarqube:9000 \
-                          -Dsonar.sources=./${PROJECT_ROOT}/*\
+                          -Dsonar.sources=./${PROJECT_ROOT}\
                           -Dsonar.login=admin \
                           -Dsonar.password=admin1"
                 }
