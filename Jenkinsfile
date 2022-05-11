@@ -1,11 +1,11 @@
 pipeline {
-    agent { docker { image 'python:3' } }
+    agent { docker { image 'python:3.8' } }
     
     environment {
       // General Variables for Pipeline
       PROJECT_ROOT = 'pipeline'
       //EMAIL_ADDRESS = '@gmail.com'
-      REGISTRY = 'monteblack1/docker-pruebaz'
+      REGISTRY = 'monteblack1/docker-prueba'
     }
     stages {
 
@@ -39,7 +39,7 @@ pipeline {
                           -Dsonar.projectKey=SimpleExpressExample:Test \
                           -Dsonar.projectName=SimpleExpressExample \
                           -Dsonar.projectVersion=0.0.${BUILD_NUMBER} \
-                          -Dsonar.host.url=http://mysonarqube:9000 \
+                          -Dsonar.host.url=http://localhost:9000 \
                           -Dsonar.sources=./${PROJECT_ROOT}\
                           -Dsonar.login=admin \
                           -Dsonar.password=admin1"
