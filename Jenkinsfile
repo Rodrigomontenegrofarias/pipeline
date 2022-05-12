@@ -39,7 +39,8 @@ pipeline {
                           -Dsonar.projectKey=rodrigo \
                           -Dsonar.sources=. \
                           -Dsonar.host.url=http://localhost:9000 \
-                          -Dsonar.login=83a64ed5d165e1ce740070474097e6426ac72ebd"
+                          -Dsonar.login=admin\
+                          -Dsonar.password=admin1"
             }
           }
               
