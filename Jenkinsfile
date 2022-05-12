@@ -26,37 +26,37 @@ pipeline {
             // Get Github repo using Github credentials (previously added to Jenkins credentials)
             checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Rodrigomontenegrofarias/pipeline']]])        }
         }
-        stage('scan') {
-          environment {
+       // stage('scan') {
+       //   environment {
             // Previously defined in the Jenkins "Global Tool Configuration"
-            scannerHome = tool 'sonar-scanner'
-          }
-            steps {
+       //     scannerHome = tool 'sonar-scanner'
+       //   }
+       //     steps {
             // "sonarqube" is the server configured in "Configure System"
-              withSonarQubeEnv('sonarqube') {
+       //       withSonarQubeEnv('sonarqube') {
               // Execute the SonarQube scanner with desired flags
-              sh "${scannerHome}/bin/sonar-scanner \
-                          -Dsonar.projectKey=rodrigo \
-                          -Dsonar.sources=. \
-                          -Dsonar.host.url=http://localhost:9000 \
-                          -Dsonar.login=admin\
-                          -Dsonar.password=admin1"
-            }
-          }
+        //      sh "${scannerHome}/bin/sonar-scanner \
+          //                -Dsonar.projectKey=rodrigo \
+            //              -Dsonar.sources=. \
+              //            -Dsonar.host.url=http://localhost:9000 \
+                //          -Dsonar.login=admin\
+                  //        -Dsonar.password=admin1"
+        //    }
+         // }
               
-        }
+       // }
         
-        stage('Build docker-image') {
-            steps {
-            sh "cd ./${PROJECT_ROOT};docker build -t ${REGISTRY}:${BUILD_NUMBER} . "
-            }
-        }
-        stage('Deploy docker-image') {
-            steps {
-            // If the Dockerhub authentication stopped, do it again
-            sh 'docker login'
-            sh "docker push ${REGISTRY}:${BUILD_NUMBER}"
-            }
-       }
+        //stage('Build docker-image') {
+        //    steps {
+         //   sh "cd ./${PROJECT_ROOT};docker build -t ${REGISTRY}:${BUILD_NUMBER} . "
+           // }
+       // }
+        //stage('Deploy docker-image') {
+          //  steps {
+          //  // If the Dockerhub authentication stopped, do it again
+          //  sh 'docker login'
+           // sh "docker push ${REGISTRY}:${BUILD_NUMBER}"
+          //  }
+      // }
     }
 }
