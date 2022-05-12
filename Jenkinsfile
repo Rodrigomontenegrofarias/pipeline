@@ -21,11 +21,11 @@ pipeline {
                 sh 'python --version'
             }
         }
-        stage('Checkout') {
-            steps {
+        //stage('Checkout') {
+        //    steps {
             // Get Github repo using Github credentials (previously added to Jenkins credentials)
-            checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Rodrigomontenegrofarias/pipeline']]])        }
-        }
+        //    checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Rodrigomontenegrofarias/pipeline']]])        }
+       // }
        // stage('scan') {
        //   environment {
             // Previously defined in the Jenkins "Global Tool Configuration"
