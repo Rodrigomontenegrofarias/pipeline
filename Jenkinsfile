@@ -40,8 +40,9 @@ pipeline {
                           -Dsonar.projectName=sonarqube \
                           -Dsonar.projectVersion=0.0.${BUILD_NUMBER} \
                           -Dsonar.host.url=http://localhost:9000 \
-                          -Dsonar.sources=. \
-                          -Dsonar.login=83a64ed5d165e1ce740070474097e6426ac72ebd "
+                          -Dsonar.sources=.    \
+                          -Dsonar.login=admin \
+                          -Dsonar.password=admin1"
                 }
             
             }
