@@ -42,7 +42,7 @@ pipeline {
                           -Dsonar.host.url=http://localhost:9000 \
                           -Dsonar.sources=./${PROJECT_ROOT}/*.py \
                           -Dsonar.login=admin \
-                          -Dsonar.password=admin \"
+                          -Dsonar.password=admin "
             }
               
         }
