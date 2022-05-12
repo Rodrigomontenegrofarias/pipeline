@@ -39,10 +39,11 @@ pipeline {
                           -Dsonar.projectKey=SimpleExpressExample:Test \
                           -Dsonar.projectName=SimpleExpressExample \
                           -Dsonar.projectVersion=0.0.${BUILD_NUMBER} \
-                          -Dsonar.host.url=http://localhost:9000 \
-                          -Dsonar.sources=./${PROJECT_ROOT}\
-                          -Dsonar.login=admin \
-                          -Dsonar.password=admin1"
+                          
+                          -Dsonar.login=admin\
+                      
+                          -Dsonar.password=admin1\
+                          -Dsonar.host.url=http://localhost:9000/ "
                 }
             
             }
