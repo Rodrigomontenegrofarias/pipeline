@@ -40,9 +40,8 @@ pipeline {
                           -Dsonar.projectName=pipeline \
                           -Dsonar.projectVersion=0.0.${BUILD_NUMBER} \
                           -Dsonar.host.url=http://localhost:9000 \
-                          -Dsonar.sources=./${PROJECT_ROOT}/*.py \
                           -Dsonar.login=admin \
-                          -Dsonar.password=admin "
+                          -Dsonar.password=admin1 "
             }
           }
               
