@@ -5,8 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                git url: 'https://github.com/Rodrigomontenegrofarias/pipeline',branch: 'main',
-                credentials:'github_creds'
+                git url: 'https://github.com/Rodrigomontenegrofarias/pipeline', branch: 'main',
+                credentialsId:'github_creds'
             }
 
         }
