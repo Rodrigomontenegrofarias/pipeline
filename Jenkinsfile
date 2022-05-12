@@ -36,12 +36,10 @@ pipeline {
                 withSonarQubeEnv('sonarqube') {
               // Execute the SonarQube scanner with desired flags
                 sh "${scannerHome}/bin/sonar-scanner \
-                          -Dsonar.projectKey=SimpleExpressExample:Test \
-                          -Dsonar.projectName=SimpleExpressExample \
-                          -Dsonar.projectVersion=0.0.${BUILD_NUMBER} \
-                          
+                          -Dsonar.projectKey=pipeline:Test \
+                          -Dsonar.projectName=pipeline \
+                          -Dsonar.projectVersion=0.0.${BUILD_NUMBER} \                         
                           -Dsonar.login=admin\
-                      
                           -Dsonar.password=admin1\
                           -Dsonar.host.url=http://localhost:9000/ "
                 }
