@@ -24,7 +24,7 @@ pipeline {
         stage('Checkout') {
             steps {
             // Get Github repo using Github credentials (previously added to Jenkins credentials)
-            checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Rodrigomontenegrofarias/pipeline']]])        }
+            checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Rodrigomontenegrofarias/pipeline']]])        }
         }
         stage('scan') {
           environment {
@@ -36,13 +36,12 @@ pipeline {
                 withSonarQubeEnv('sonarqube') {
               // Execute the SonarQube scanner with desired flags
                 sh "${scannerHome}/bin/sonar-scanner \
-                          -Dsonar.projectKey=SimpleExpressExample:Test \
-                          -Dsonar.projectName=SimpleExpressExample \
+                          -Dsonar.projectKey=sonarqube \
+                          -Dsonar.projectName=sonarqube \
                           -Dsonar.projectVersion=0.0.${BUILD_NUMBER} \
-                          -Dsonar.host.url=http://mysonarqube:9000 \
-                          -Dsonar.sources=./${PROJECT_ROOT}\
-                          -Dsonar.login=admin \
-                          -Dsonar.password=admin1"
+                          -Dsonar.host.url=http://localhost:9000 \
+                          -Dsonar.sources=. \
+                          -Dsonar.login=83a64ed5d165e1ce740070474097e6426ac72ebd "
                 }
             
             }
