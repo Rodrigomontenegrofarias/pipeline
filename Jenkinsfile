@@ -10,12 +10,7 @@ pipeline {
             }
 
         }
-        stage('Create Branch & Push Branch'){
-           steps {
-              script { sh "git checkout -b release/${NEW_TAG}" sh "git push --set-upstream" } 
-              
-            } 
-        }
+        
         
         stage('Test') {
             steps {
