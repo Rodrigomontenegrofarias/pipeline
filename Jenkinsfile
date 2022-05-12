@@ -44,6 +44,7 @@ pipeline {
                           -Dsonar.login=admin \
                           -Dsonar.password=admin "
             }
+          }
               
         }
         
@@ -59,4 +60,5 @@ pipeline {
             sh "docker push ${REGISTRY}:${BUILD_NUMBER}"
             }
        }
-  }
+    }
+}
