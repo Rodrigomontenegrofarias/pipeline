@@ -15,7 +15,7 @@ pipeline {
                 sh('git remote -v')
                 sh('git show-ref')
                 sh('git tag -a main.$BUILD_NUMBER -m "git commit $BUILD_NUMBER"')
-                sh('git push origin --tags')
+                sh('git push origin main --tags')
 
             }
         }
