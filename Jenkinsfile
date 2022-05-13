@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                git url: 'https://github.com/Rodrigomontenegrofarias/pipeline', branch: 'main',
+                git url: 'git@github.com:Rodrigomontenegrofarias/pipeline.git', branch: 'main',
                 credentialsId:'github_creds'
                 
             }
