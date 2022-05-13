@@ -28,7 +28,7 @@ pipeline {
                 echo 'Deploying....'
                 withCredentials([usernamePassword(credentialsId: 'github_creds',
                 passwordVariable: 'Rodrigojesus1001', usernameVariable: 'Rodrigomontenegrofarias')]) {
-                sh('git tag -a $BRANCH_NAME.$BUILD_NUMBER -m "git sha is $GIT_COMMIT"')
+                sh('git tag $BUILD_NUMBER -a -m "git sha is $GIT_COMMIT"')
                 sh('git push --tags')
                 }
            } 
