@@ -7,7 +7,7 @@ pipeline {
                 echo 'Building..'
                 git url: 'https://github.com/Rodrigomontenegrofarias/pipeline.git', branch: 'main',
                 credentialsId:'github_creds'
-                sh('mkdir 1')
+                sh('nano 1.py')
                 sh('git add .')
                 sh('git commit -m "aa"')
                 sh('git push')
