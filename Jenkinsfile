@@ -49,8 +49,8 @@ pipeline {
           }
       }
       //stage('Build docker-image') {
-        steps {
-          sh "cd ./${PROJECT_ROOT};docker build -t ${REGISTRY}:${BUILD_NUMBER} . "
+       // steps {
+       //   sh "cd ./${PROJECT_ROOT};docker build -t ${REGISTRY}:${BUILD_NUMBER} . "
         }
       //}
       //stage('Deploy docker-image') {
