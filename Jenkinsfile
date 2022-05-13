@@ -14,7 +14,7 @@ pipeline {
                 sh('git tag $BUILD_NUMBER -a -m "git commit $BUILD_NUMBER"')         
                 sh('git remote remove origin')
                 sh('git remote add origin https://Rodrigomontenegrofarias:Rodrigojesus1001@github.com/Rodrigomontenegrofarias/pipeline.git')
-                sh('git push --set-upstream origin main')
+                sh('git push --tags')
 //sh('git clone https://github.com/Rodrigomontenegrofarias/pipeline.git')
             }
         }
