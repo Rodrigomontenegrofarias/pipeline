@@ -167,3 +167,5 @@
 2022.05.13 04:14:32 WARN  es[][o.e.m.j.JvmGcMonitorService] [gc][2692] overhead, spent [4.5s] collecting in the last [1s]
 2022.05.13 04:14:32 WARN  es[][o.e.t.ThreadPool] execution of [ReschedulingRunnable{runnable=org.elasticsearch.monitor.jvm.JvmGcMonitorService$1@5c74a10f, interval=1s}] took [5008ms] which is above the warn threshold of [5000ms]
 2022.05.13 04:46:24 INFO  es[][o.e.m.j.JvmGcMonitorService] [gc][4603] overhead, spent [438ms] collecting in the last [1s]
+2022.05.13 05:32:15 INFO  es[][o.e.m.j.JvmGcMonitorService] [gc][young][7338][24] duration [937ms], collections [1]/[1.8s], total [937ms]/[6.1s], memory [107.9mb]->[61.9mb]/[512mb], all_pools {[young] [46mb]->[0b]/[0b]}{[old] [60.9mb]->[60.9mb]/[512mb]}{[survivor] [1mb]->[1mb]/[0b]}
+2022.05.13 05:32:15 WARN  es[][o.e.m.j.JvmGcMonitorService] [gc][7338] overhead, spent [937ms] collecting in the last [1.8s]
