@@ -12,7 +12,7 @@ pipeline {
                 sh('git config --global user.email "rodrigo.montenegro@alumnos.uv.cl"')
                 sh('git config --global user.name "Rodrigomontenegrofarias"')
                 sh('git tag $BUILD_NUMBER -a -m "git commit $BUILD_NUMBER"')         
-                sh('git push')
+                sh('git push --set-upstream origin main')
                 //sh('cat -/.gitconfig')
                 
                // sh(' git clone https://github.com/Rodrigomontenegrofarias/pipeline.git')
