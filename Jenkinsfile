@@ -10,7 +10,7 @@ pipeline {
                 sh('nano 1.py')
                 sh('git add .')
                 sh('git commit -m "aa1"')
-                sh('cat -/.gitconfig')
+                //sh('cat -/.gitconfig')
                 
                // sh(' git clone https://github.com/Rodrigomontenegrofarias/pipeline.git')
             }
@@ -33,8 +33,8 @@ pipeline {
                 echo 'Deploying....'
                 withCredentials([usernamePassword(credentialsId: 'github_creds',
                 passwordVariable: 'Rodrigojesus1001', usernameVariable: 'Rodrigomontenegrofarias')]) {
-                sh('git tag $BUILD_NUMBER -a -m "git sha is $GIT_COMMIT"')
-                sh('git push origin main --tags')
+                sh('git tag $BUILD_NUMBER -a -m "git sha is $BUILD_NUMBER"')
+                sh('git push --tags')
                 }
            } 
         }
