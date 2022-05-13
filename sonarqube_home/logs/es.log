@@ -162,3 +162,4 @@
 2022.05.13 03:28:30 INFO  es[][o.e.n.Node] started
 2022.05.13 03:28:30 INFO  es[][o.e.g.GatewayService] recovered [7] indices into cluster_state
 2022.05.13 03:28:31 INFO  es[][o.e.c.r.a.AllocationService] Cluster health status changed from [RED] to [GREEN] (reason: [shards started [[metadatas][0]]]).
+2022.05.13 03:47:58 WARN  es[][o.e.t.ThreadPool] execution of [ReschedulingRunnable{runnable=org.elasticsearch.monitor.jvm.JvmGcMonitorService$1@5c74a10f, interval=1s}] took [6889ms] which is above the warn threshold of [5000ms]
