@@ -169,3 +169,10 @@
 2022.05.13 04:46:24 INFO  es[][o.e.m.j.JvmGcMonitorService] [gc][4603] overhead, spent [438ms] collecting in the last [1s]
 2022.05.13 05:32:15 INFO  es[][o.e.m.j.JvmGcMonitorService] [gc][young][7338][24] duration [937ms], collections [1]/[1.8s], total [937ms]/[6.1s], memory [107.9mb]->[61.9mb]/[512mb], all_pools {[young] [46mb]->[0b]/[0b]}{[old] [60.9mb]->[60.9mb]/[512mb]}{[survivor] [1mb]->[1mb]/[0b]}
 2022.05.13 05:32:15 WARN  es[][o.e.m.j.JvmGcMonitorService] [gc][7338] overhead, spent [937ms] collecting in the last [1.8s]
+2022.05.13 07:00:26 WARN  es[][o.e.t.ThreadPool] timer thread slept for [22.2s/22271ms] on absolute clock which is above the warn threshold of [5000ms]
+2022.05.13 07:00:26 WARN  es[][o.e.t.ThreadPool] timer thread slept for [22.2s/22271123755ns] on relative clock which is above the warn threshold of [5000ms]
+2022.05.13 07:06:37 INFO  es[][o.e.m.j.JvmGcMonitorService] [gc][12963] overhead, spent [439ms] collecting in the last [1s]
+2022.05.13 07:53:55 WARN  es[][o.e.t.ThreadPool] timer thread slept for [5.9s/5926ms] on absolute clock which is above the warn threshold of [5000ms]
+2022.05.13 07:53:56 WARN  es[][o.e.t.ThreadPool] timer thread slept for [5.9s/5926713780ns] on relative clock which is above the warn threshold of [5000ms]
+2022.05.13 07:53:57 WARN  es[][o.e.t.ThreadPool] timer thread slept for [5.4s/5437ms] on absolute clock which is above the warn threshold of [5000ms]
+2022.05.13 07:53:57 WARN  es[][o.e.t.ThreadPool] timer thread slept for [5.4s/5436953554ns] on relative clock which is above the warn threshold of [5000ms]
