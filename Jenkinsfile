@@ -7,9 +7,12 @@ pipeline {
                 echo 'Building..'
                 git url: 'https://github.com/Rodrigomontenegrofarias/pipeline.git', branch: 'main',
                 credentialsId:'github_creds'
-                sh('nano 1.py')
-                sh('git add .')
-                sh('git commit -m "aa1"')
+                
+                sh('git remote -v')
+                sh('git config --global user.email "rodrigo.montenegro@alumnos.uv.cl"')
+                sh('git config --global user.name "Rodrigomontenegrofarias"')
+                sh('git tag $BUILD_NUMBER -a -m "git commit $BUILD_NUMBER"')         
+                sh('git push --tags')
                 //sh('cat -/.gitconfig')
                 
                // sh(' git clone https://github.com/Rodrigomontenegrofarias/pipeline.git')
@@ -19,11 +22,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing..'
-                sh('git remote -v')
-                sh('git config --global user.email "rodrigo.montenegro@alumnos.uv.cl"')
-                sh('git config --global user.name "Rodrigomontenegrofarias"')
-                sh('git tag $BUILD_NUMBER -a -m "git commit $BUILD_NUMBER"')         
-                sh('git push --tags')
+                
             }
         }        
     }
