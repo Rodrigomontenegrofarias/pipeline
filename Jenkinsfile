@@ -29,7 +29,7 @@ pipeline {
                 withCredentials([usernamePassword(credentialsId: 'github_creds',
                 passwordVariable: 'Rodrigojesus1001', usernameVariable: 'Rodrigomontenegrofarias')]) {
                 sh('git tag -a $BRANCH_NAME.$BUILD_NUMBER -m "git sha is $GIT_COMMIT"')
-                sh('git push https://$GIT_USER:$GIT_...@github.com/Rodrigomontenegrofarias/pipeline.git' --tags')
+                sh('git push --tags')
             }
             
         }
