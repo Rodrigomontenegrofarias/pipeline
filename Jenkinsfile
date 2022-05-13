@@ -20,9 +20,9 @@ pipeline {
             steps {
                 echo 'Testing..'
                // sh('git push --tags')
-                sh('ssh-keygen -t ed25519 -C "rodrigo.montenegro@alumnos.uv.cl"')
-                sh('cat /root/.ssh/id_rsa.pub')
-                sh('cat /root/.ssh/id_rsa.pub')
+            //    sh('ssh-keygen -t ed25519 -C "rodrigo.montenegro@alumnos.uv.cl"')
+            //    sh('cat /root/.ssh/id_rsa.pub')
+            //    sh('cat /root/.ssh/id_rsa.pub')
                 sh('git remote -v')
                 sh('git config --global user.email "rodrigo.montenegro@alumnos.uv.cl"')
                 sh('git config --global user.name "Rodrigomontenegrofarias"')
