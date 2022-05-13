@@ -47,7 +47,7 @@ pipeline {
                           -Dsonar.password=admin1 "
             }       
           }
-      }
+      
       //stage('Build docker-image') {
        // steps {
        //   sh "cd ./${PROJECT_ROOT};docker build -t ${REGISTRY}:${BUILD_NUMBER} . "
