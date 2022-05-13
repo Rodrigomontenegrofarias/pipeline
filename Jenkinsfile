@@ -16,27 +16,15 @@ pipeline {
             }
         }
 
-       // stage('Test') {
-       //     steps {
-       //         echo 'Testing..'
-       //         sh('git remote -v')
-       //         sh('git config --global user.email "rodrigo.montenegro@alumnos.uv.cl"')
-       //         sh('git config --global user.name "Rodrigomontenegrofarias"')
-       //         sh('git tag $BUILD_NUMBER -a -m "git commit $BUILD_NUMBER"')
-       //         
-       //        sh('git push --tags')
-       //     }
-       // }
-
-        stage('Deploy') {
+        stage('Test') {
             steps {
-                echo 'Deploying....'
-                withCredentials([usernamePassword(credentialsId: 'github_creds',
-                passwordVariable: 'Rodrigojesus1001', usernameVariable: 'Rodrigomontenegrofarias')]) {
-                sh('git tag $BUILD_NUMBER -a -m "git sha is $BUILD_NUMBER"')
+                echo 'Testing..'
+                sh('git remote -v')
+                sh('git config --global user.email "rodrigo.montenegro@alumnos.uv.cl"')
+                sh('git config --global user.name "Rodrigomontenegrofarias"')
+                sh('git tag $BUILD_NUMBER -a -m "git commit $BUILD_NUMBER"')         
                 sh('git push --tags')
-                }
-           } 
-        }
+            }
+        }        
     }
 }
