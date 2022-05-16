@@ -7,7 +7,9 @@ pipeline {
                 echo 'Building..'
                 git url: 'https://github.com/Rodrigomontenegrofarias/pipeline.git', branch: 'main',
                 credentialsId:'github_creds'
-                
+                sh('git remote -v')
+                sh('git config --global user.email "rodrigo.montenegro@alumnos.uv.cl"')
+                sh('git config --global user.name "Rodrigomontenegrofarias"')
                 sh('git tag $BUILD_NUMBER -a -m "git commit $BUILD_NUMBER"')         
                 sh('git remote remove origin')
                 sh('git remote add origin https://Rodrigomontenegrofarias:Rodrigojesus1001@github.com/Rodrigomontenegrofarias/ci-cd-prueba.git')
@@ -23,9 +25,9 @@ pipeline {
             //    sh('ssh-keygen -t ed25519 -C "rodrigo.montenegro@alumnos.uv.cl"')
             //    sh('cat /root/.ssh/id_rsa.pub')
             //    sh('cat /root/.ssh/id_rsa.pub')
-                sh('git remote -v')
-                sh('git config --global user.email "rodrigo.montenegro@alumnos.uv.cl"')
-                sh('git config --global user.name "Rodrigomontenegrofarias"')
+          //      sh('git remote -v')
+          //      sh('git config --global user.email "rodrigo.montenegro@alumnos.uv.cl"')
+           //     sh('git config --global user.name "Rodrigomontenegrofarias"')
             }
         }
       }
