@@ -28,11 +28,14 @@ pipeline {
                 sh('git config --global user.name "Rodrigomontenegrofarias"')
             }
         }
+      }
+}
+    
     ///    stage('scan') {
        //   environment {
             // Previously defined in the Jenkins "Global Tool Configuration"
         //    scannerHome = tool 'sonar-scanner'
-          }
+          
         //  steps {
             // "sonarqube" is the server configured in "Configure System"
         //    withSonarQubeEnv('sonarqube') {
@@ -59,6 +62,5 @@ pipeline {
       //    sh 'docker login'
       //    sh "docker push ${REGISTRY}:${BUILD_NUMBER}"
       //  }
-      }        
-    }
-}
+              
+    
