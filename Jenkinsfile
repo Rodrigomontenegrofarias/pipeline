@@ -12,8 +12,9 @@ pipeline {
                 sh('git config --global user.name "Rodrigomontenegrofarias"')
                 sh('git tag $BUILD_NUMBER -a -m "git commit $BUILD_NUMBER"')         
                 sh('git remote remove origin')
-                sh('git remote add origin https://Rodrigomontenegrofarias:Rodrigojesus1001@github.com/Rodrigomontenegrofarias/ci-cd-prueba.git')
+                sh('git remote add origin https://Rodrigomontenegrofarias:Rodrigojesus1001@github.com/Rodrigomontenegrofarias/pipeline.git')
                 sh('ls -a')
+                sh('git push origin main')
                 
             }
         }
