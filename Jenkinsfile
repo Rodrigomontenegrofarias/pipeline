@@ -59,6 +59,6 @@ pipeline {
       //    sh 'docker login'
       //    sh "docker push ${REGISTRY}:${BUILD_NUMBER}"
       //  }
-      //}        
+      }        
     }
 }
