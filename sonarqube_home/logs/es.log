@@ -53,3 +53,4 @@
 2022.05.16 21:26:18 WARN  es[][o.e.t.ThreadPool] execution of [ReschedulingRunnable{runnable=org.elasticsearch.indices.IndexingMemoryController$ShardsIndicesStatusChecker@717639f3, interval=5s}] took [12311ms] which is above the warn threshold of [5000ms]
 2022.05.16 21:26:31 WARN  es[][o.e.t.ThreadPool] execution of [org.elasticsearch.cluster.InternalClusterInfoService$RefreshScheduler$$Lambda$3150/0x0000000100a25040@27be75f8] took [6599ms] which is above the warn threshold of [5000ms]
 2022.05.16 21:26:33 WARN  es[][o.e.h.AbstractHttpServerTransport] handling request [null][GET][/_cluster/health?master_timeout=30s&level=cluster&timeout=30s][Netty4HttpChannel{localAddress=/127.0.0.1:9001, remoteAddress=/127.0.0.1:56770}] took [6800ms] which is above the warn threshold of [5000ms]
+2022.05.16 21:50:53 INFO  es[][o.e.m.j.JvmGcMonitorService] [gc][4809] overhead, spent [377ms] collecting in the last [1s]
