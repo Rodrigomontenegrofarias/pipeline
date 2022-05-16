@@ -10,8 +10,8 @@ pipeline {
                 
                 sh('git tag $BUILD_NUMBER -a -m "git commit $BUILD_NUMBER"')         
                 sh('git remote remove origin')
-                sh('git remote add origin https://Rodrigomontenegrofarias:Rodrigojesus1001@github.com/Rodrigomontenegrofarias/pipeline.git')
-
+                sh('git remote add origin https://Rodrigomontenegrofarias:Rodrigojesus1001@github.com/Rodrigomontenegrofarias/ci-cd-prueba.git')
+                sh('ls -a')
                 
             }
         }
@@ -28,30 +28,30 @@ pipeline {
                 sh('git config --global user.name "Rodrigomontenegrofarias"')
             }
         }
-        stage('scan') {
-          environment {
+    ///    stage('scan') {
+       //   environment {
             // Previously defined in the Jenkins "Global Tool Configuration"
-            scannerHome = tool 'sonar-scanner'
+        //    scannerHome = tool 'sonar-scanner'
           }
-          steps {
+        //  steps {
             // "sonarqube" is the server configured in "Configure System"
-            withSonarQubeEnv('sonarqube') {
+        //    withSonarQubeEnv('sonarqube') {
               // Execute the SonarQube scanner with desired flags
-              sh "${scannerHome}/bin/sonar-scanner \
-                          -Dsonar.projectKey=pipeline \
-                          -Dsonar.projectName=pipeline \
-                          -Dsonar.projectVersion=0.0.${BUILD_NUMBER} \
-                          -Dsonar.host.url=https://fb676f7229dd1e.lhrtunnel.link/ \
-                          -Dsonar.sources=. \
-                          -Dsonar.login=admin \
-                          -Dsonar.password=admin1 "
-            }       
-          }
+        //      sh "${scannerHome}/bin/sonar-scanner \
+        //                  -Dsonar.projectKey=pipeline \
+        //                  -Dsonar.projectName=pipeline \
+        //                  -Dsonar.projectVersion=0.0.${BUILD_NUMBER} \
+         //                 -Dsonar.host.url=https://fb676f7229dd1e.lhrtunnel.link/ \
+         //                 -Dsonar.sources=. \
+         //                 -Dsonar.login=admin \
+         //                 -Dsonar.password=admin1 "
+         //   }       
+         // }
       
       //stage('Build docker-image') {
        // steps {
        //   sh "cd ./${PROJECT_ROOT};docker build -t ${REGISTRY}:${BUILD_NUMBER} . "
-        }
+       // }
       //}
       //stage('Deploy docker-image') {
       //  steps {
